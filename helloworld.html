@@ -1,0 +1,44 @@
+<html>
+<head>
+    <script
+  src="http://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+  <script> 
+      function showtext(){
+          var mytext= $("#searchbox").val();
+          $.getJSON('https://owapi.net/api/v3/u/' + mytext + '/blob', function(data) {
+              //$("img").each(function(){
+                  //var src=$(this).attr("src", data.us.stats.quickplay.overall_stats.avatar);
+              //});
+              //$("#avatar").src = data.us.stats.quickplay.overall_stats.avatar;
+             //alert(data.us.stats.quickplay.overall_stats.avatar);
+                console.log(data);
+          });
+      }
+  
+  </script>
+
+</head>
+<body>
+    <title>
+        Hello World
+    </title>
+    <div id="avatarid">
+        <img src="http://www.stickpng.com/assets/images/585e4ae1cb11b227491c3393.png" width=200 height=200>
+    </div>
+    <div>
+        <input type=text id="searchbox" name=searchbox size="20" placeholder="Query">
+        <button id="searchbutton" name=searchbutton onclick="showtext()">Search!</button>
+
+    
+    </div>
+    <div>
+        <ul>
+            <li>Search Result 1</li>
+            <li>Search Result 2</li>
+            <li>Search Result 3</li>
+        </ul>
+    </div>
+</body>
+</html>
