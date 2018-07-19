@@ -21,10 +21,11 @@
 
    /*header style*/
 .header{
-    background-image: url('../images/background.jpg');
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
+    background-image: url('../images/background.jpg'), url('../images/background-overwatch-repeat.jpg');
+    background-attachment: scroll, scroll;
+    background-size: cover, cover;
+    background-position: center, center;
+    background-repeat: no-repeat, repeat-y;
    }
 
    .overlay{
